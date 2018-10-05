@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Workers</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+	
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+	
+	<!-- header start -->
+	<header id="main_header" class="transparent-header">
+		<div class="limiting-container">
+			<div class="logo-wrap">
+				<img src="img/workers-logo-black.png" alt="" class="img-responsive logo-black">
+				<img src="img/workers-logo-white.png" alt="" class="img-responsive logo-white">
+			</div>
+			<div class="mob-menu-btn">
+				<span></span>
+			</div>
+			<div class="menu-wrap">
+				<ul class="menu-list">
+					<li><a href="#">о нас</a></li>
+					<li><a href="#">услуги</a></li>
+					<li><a href="#">обучение</a></li>
+					<li><a href="#">галерея</a></li>
+					<li><a href="#">контакты</a></li>
+				</ul>
+				<div class="header-socials">
+					<a href="#">
+						<svg xmlns="http://www.w3.org/2000/svg" width="12">
+						  <path fill-rule="evenodd" d="M2.677 16.709h2.926V9.581h2.272l.374-2.832H5.603V4.788c0-.457.083-.789.249-.996.207-.249.591-.374 1.152-.374h1.494V.897C7.937.814 7.211.772 6.319.772c-1.1 0-1.982.327-2.646.981-.664.654-.996 1.572-.996 2.755v2.241H.28v2.832h2.397v7.128z"/>
+						</svg>
+					</a>
+					<a href="#">
+						<svg xmlns="http://www.w3.org/2000/svg" width="22.656"">
+						  <path ffill-rule="evenodd" d="M8.337 4.805c.727 0 1.401.182 2.022.545a4.062 4.062 0 0 1 1.477 1.477c.363.621.545 1.295.545 2.022 0 .727-.182 1.401-.545 2.022a4.07 4.07 0 0 1-1.477 1.477 3.937 3.937 0 0 1-2.022.545 3.937 3.937 0 0 1-2.022-.545 4.062 4.062 0 0 1-1.477-1.477 3.937 3.937 0 0 1-.545-2.022c0-.727.182-1.401.545-2.022A4.054 4.054 0 0 1 6.315 5.35a3.937 3.937 0 0 1 2.022-.545zm0 6.681c.727 0 1.348-.258 1.864-.773a2.543 2.543 0 0 0 .773-1.864c0-.727-.258-1.348-.773-1.864a2.54 2.54 0 0 0-1.864-.773 2.54 2.54 0 0 0-1.864.773A2.54 2.54 0 0 0 5.7 8.849c0 .727.257 1.348.773 1.864a2.543 2.543 0 0 0 1.864.773zm5.169-6.857a.915.915 0 0 0-.281-.668.91.91 0 0 0-.668-.281.91.91 0 0 0-.668.281.912.912 0 0 0-.282.668.91.91 0 0 0 .282.668.91.91 0 0 0 .668.282.854.854 0 0 0 .65-.282 1.09 1.09 0 0 0 .299-.668zm2.673.95c.023.656.035 1.746.035 3.27s-.018 2.62-.053 3.288c-.035.668-.135 1.248-.299 1.74a4.1 4.1 0 0 1-.967 1.53 4.091 4.091 0 0 1-1.53.967c-.492.164-1.072.264-1.74.299-.668.035-1.764.053-3.288.053-1.524 0-2.62-.018-3.288-.053-.668-.035-1.248-.147-1.741-.334a3.744 3.744 0 0 1-1.529-.932 4.1 4.1 0 0 1-.967-1.53c-.164-.492-.264-1.072-.299-1.74C.478 11.469.46 10.373.46 8.849c0-1.524.018-2.62.053-3.288.035-.668.135-1.248.299-1.741a4.088 4.088 0 0 1 .967-1.529 4.088 4.088 0 0 1 1.529-.967c.493-.164 1.073-.264 1.741-.299C5.717.99 6.813.972 8.337.972c1.524 0 2.62.018 3.288.053.668.035 1.248.135 1.74.299a4.091 4.091 0 0 1 1.53.967c.434.433.756.943.967 1.529.164.493.27 1.079.317 1.759zm-1.688 7.912c.14-.399.234-1.032.281-1.899.023-.516.035-1.243.035-2.18V8.286c0-.961-.012-1.688-.035-2.18-.047-.891-.141-1.524-.281-1.899a2.54 2.54 0 0 0-1.512-1.512c-.375-.141-1.008-.234-1.899-.281a50.449 50.449 0 0 0-2.18-.035H7.774c-.937 0-1.664.011-2.18.035-.867.047-1.5.14-1.899.281a2.535 2.535 0 0 0-1.512 1.512c-.141.375-.234 1.008-.281 1.899a50.449 50.449 0 0 0-.035 2.18v1.126c0 .937.011 1.664.035 2.18.047.867.14 1.5.281 1.899.305.726.809 1.23 1.512 1.512.399.14 1.032.234 1.899.281.516.023 1.243.035 2.18.035H8.9c.961 0 1.687-.012 2.18-.035.891-.047 1.524-.141 1.899-.281.726-.305 1.23-.809 1.512-1.512z"/>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- header end -->
+
+	<main>
+
+		<div class="bg-screen">
+			<img src="img/school.jpg" alt="">
+			<div class="foreground">
+				<div class="limiting-container">
+					<div class="text-container text-white">
+						<h1 class="h1">Школа<br>парикмахерского искусства<br>WORKERS</h1>
+						<p>Мы научим вас не стричь, а воплощать искусство</p>
+						<div class="btns">
+							<a href="#" class="btn text-white fixed-width">Семинары</a>
+							<a href="#" class="btn text-white fixed-width">Школа</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="trainings-screen limiting-container">
+			<h2 class="h1">Повышение квалификации</h2>
+			<p class="sub-heading">Приглашаем мастеров на семинары и мастер-классы для парикмахеров, делимся опытом и идеями.</p>
+			<div class="trainings-table">
+				<div class="headings flex">
+					<div class="col-6">Мероприятие</div>
+					<div class="col-2">тип</div>
+					<div class="col-2">дата</div>
+					<div class="col-2">стоимость</div>
+				</div>
+				<div class="flex training-item">
+					<a href="#" class="flex link-slide">
+						<div class="col-6 name">
+							<div class="img-wrap">
+								<img src="img/training.png" alt="">
+							</div>
+							<p class="link-slide"><span class="link-inner" data-hover="Авторский семинар Михаила Кожухаря">Авторский семинар Михаила Кожухаря</span></p>
+						</div>
+						<div class="col-2 link-slide"><span class="link-inner" data-hover="Семинар">Семинар</span></div>
+						<div class="col-2 link-slide"><span class="link-inner" data-hover="27-29.06.2018">27-29.06.2018</span></div>
+						<div class="col-2 link-slide"><span class="link-inner" data-hover="285 грн">285 грн</span></div>
+					</a>
+				</div>
+				<div class="flex training-item">
+					<div class="col-6 name">
+						<div class="img-wrap">
+							<img src="img/training.png" alt="">
+						</div>
+						<p>"WORKERS Collection 2018" with the ART-team workers GROUP Women's & Men's Haircuts & Coloring</p>
+					</div>
+					<div class="col-2">Семинар</div>
+					<div class="col-2">27-29.06.2018</div>
+					<div class="col-2">285 грн</div>
+				</div>
+				<div class="flex training-item">
+					<div class="col-6 name">
+						<div class="img-wrap">
+							<img src="img/training.png" alt="">
+						</div>
+						<p>Авторский семинар Михаила Кожухаря</p>
+					</div>
+					<div class="col-2">Семинар</div>
+					<div class="col-2">27-29.06.2018</div>
+					<div class="col-2">285 грн</div>
+				</div>
+			</div>
+			<div class="more-trainings-wrap link-slide">
+				<a href="" class="more-trainings link-slide"><span class="link-inner" data-hover="показать еще">показать еще</span></a>
+			</div>
+		</div>
+
+		<div class="gray-bg school-about-screen">
+			<div class="limiting-container">
+				<div class="two-irregular-columns chaos-images-screen">
+					<div class="first-col chaos-images">
+						
+						<div>
+							<img src="img/pic-8.jpg" alt="">
+						</div>
+						<div class="chaos-line">
+							<div>
+								<img src="img/pic-9.jpg" alt="">
+							</div>
+							<div>
+								<img src="img/pic-10.jpg" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="second-col text-column">
+						<h2 class="h1">О школе</h2>
+						<p class="sub-heading">
+							в нашей школе мы обучаем как новичков так и  мастеров, которые хотят усовершенствовать свое профессиональное видение
+						</p>
+						<p>
+							Мы предлагаем Вам новый уровень в обучении парикмахерскому искусству: состав преподавателей высшего уровня, лекции и практические отработки, на которых не будет скучно, индивидуальный подход к каждому ученику, а также атмосфера, в которую захочется вернуться! Вы сможете изучить:
+						</p>
+						<ul>
+							<li>Основы парикмахерского искусства</li>
+							<li>Классические техники укладки и накрутки</li>
+							<li>Основы окрашивания</li>
+							<li>Свадебные и вечерние прически</li>
+							<li>Тенденции салонного мастерства ведущих школ Европы</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="courses-list limiting-container">
+
+			<div class="two-columns-container course">
+				<div class="two-columns-column img-col">
+					<div class="img-wrap">
+						<img src="img/course1.jpg" alt="">
+					</div>
+				</div>
+				<div class="two-columns-column text-column">
+					<span class="for">для новичков</span>
+					<span class="name">Базовое образование</span>
+					<ul>
+						<li>Курс “Парикмахерское искусство”</li>
+						<li>Курс “Окрашивание”</li>
+						<li>Курс “Вечерние прически”</li>
+						<li>Курс “Свадебные прически”</li>
+					</ul>
+					<div class="course-stats">
+						<div class="stat-col">
+							<span class="caption">дата набора</span>
+							<span class="value">25.05.2018</span>
+						</div>
+						<div class="stat-col">
+							<span class="caption">Длительность</span>
+							<span class="value">8 месяцев</span>
+						</div>
+						<div class="stat-col">
+							<span class="caption">Стоимость</span>
+							<span class="value">8000 грн</span>
+						</div>
+					</div>
+					<a href="#" class="btn fixed-width text-black">Подробнее</a>
+				</div>
+			</div>
+
+			<div class="two-columns-container course">
+				<div class="two-columns-column img-col">
+					<div class="img-wrap">
+						<img src="img/course2.jpg" alt="">
+					</div>
+				</div>
+				<div class="two-columns-column text-column">
+					<span class="for">Для опытных мастеров</span>
+					<span class="name">Базовый Advance</span>
+					<p>Обучение сочетает в себе наиболее коммерческие технологии с элементами последних тенденций салонного мастерства ведущих школ Европы. Даннныйкурс направлен на зкрепление мастерства первого уровня, повышение профессионализма.</p>
+					<div class="course-stats">
+						<div class="stat-col">
+							<span class="caption">дата набора</span>
+							<span class="value">25.05.2018</span>
+						</div>
+						<div class="stat-col">
+							<span class="caption">Длительность</span>
+							<span class="value">2 месяца</span>
+						</div>
+						<div class="stat-col">
+							<span class="caption">Стоимость</span>
+							<span class="value">15000 грн</span>
+						</div>
+					</div>
+					<a href="#" class="btn fixed-width text-black">Подробнее</a>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="big-quote">
+			<!-- <img src="https://via.placeholder.com/55x40" alt="" class="quote-ico"> -->
+			<img src="img/qoute.svg" alt="">
+			<blockquote>Workers — это место, где могут получить новые знания, как профессионалы, так и те, кто хочет научиться искусству красоты для себя лично. </blockquote>
+		</div>
+
+
+		<footer id="main-footer">
+			<div class="logo">
+				<img src="img/logo-footer.png" alt="">
+			</div>
+			<p class="copyright">© 2018 Workers / Все права защищены</p>
+		</footer>
+
+
+	</main>
+
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Workers</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+	
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+	<!-- modals start -->
+	<div id="modal-container" class="">
+	  <div class="modal-background">
+	    <div class="modal standart-modal">
+	      <span class="h1">Ваше сообщение<br>успешно отправлено</span>
+	      <p class="pop-text">Спасибо за ваше сообщение<br>Мы с радотью оветим на все ваши вопросы.</p>
+	      <button class="btn close-three text-white">Закрыть</button>
+	    </div>
+	  </div>
+	</div>
+	<!-- modals end     -->
+	
+	<!-- content-wrap -->
+	<div class="content">
+		<!-- header start -->
+		<header id="main_header">
+			<div class="limiting-container">
+				<div class="logo-wrap">
+					<img src="img/workers-logo-black.png" alt="" class="img-responsive logo-black">
+					<img src="img/workers-logo-white.png" alt="" class="img-responsive logo-white">
+				</div>
+				<div class="mob-menu-btn">
+					<span></span>
+				</div>
+				<div class="menu-wrap">
+					<ul class="menu-list">
+						<li><a href="#">о нас</a></li>
+						<li><a href="#">услуги</a></li>
+						<li><a href="#">обучение</a></li>
+						<li><a href="#">галерея</a></li>
+						<li><a href="#">контакты</a></li>
+					</ul>
+					<div class="header-socials">
+						<a href="#">
+							<svg xmlns="http://www.w3.org/2000/svg" width="12">
+							  <path fill-rule="evenodd" d="M2.677 16.709h2.926V9.581h2.272l.374-2.832H5.603V4.788c0-.457.083-.789.249-.996.207-.249.591-.374 1.152-.374h1.494V.897C7.937.814 7.211.772 6.319.772c-1.1 0-1.982.327-2.646.981-.664.654-.996 1.572-.996 2.755v2.241H.28v2.832h2.397v7.128z"/>
+							</svg>
+						</a>
+						<a href="#">
+							<svg xmlns="http://www.w3.org/2000/svg" width="22.656"">
+							  <path ffill-rule="evenodd" d="M8.337 4.805c.727 0 1.401.182 2.022.545a4.062 4.062 0 0 1 1.477 1.477c.363.621.545 1.295.545 2.022 0 .727-.182 1.401-.545 2.022a4.07 4.07 0 0 1-1.477 1.477 3.937 3.937 0 0 1-2.022.545 3.937 3.937 0 0 1-2.022-.545 4.062 4.062 0 0 1-1.477-1.477 3.937 3.937 0 0 1-.545-2.022c0-.727.182-1.401.545-2.022A4.054 4.054 0 0 1 6.315 5.35a3.937 3.937 0 0 1 2.022-.545zm0 6.681c.727 0 1.348-.258 1.864-.773a2.543 2.543 0 0 0 .773-1.864c0-.727-.258-1.348-.773-1.864a2.54 2.54 0 0 0-1.864-.773 2.54 2.54 0 0 0-1.864.773A2.54 2.54 0 0 0 5.7 8.849c0 .727.257 1.348.773 1.864a2.543 2.543 0 0 0 1.864.773zm5.169-6.857a.915.915 0 0 0-.281-.668.91.91 0 0 0-.668-.281.91.91 0 0 0-.668.281.912.912 0 0 0-.282.668.91.91 0 0 0 .282.668.91.91 0 0 0 .668.282.854.854 0 0 0 .65-.282 1.09 1.09 0 0 0 .299-.668zm2.673.95c.023.656.035 1.746.035 3.27s-.018 2.62-.053 3.288c-.035.668-.135 1.248-.299 1.74a4.1 4.1 0 0 1-.967 1.53 4.091 4.091 0 0 1-1.53.967c-.492.164-1.072.264-1.74.299-.668.035-1.764.053-3.288.053-1.524 0-2.62-.018-3.288-.053-.668-.035-1.248-.147-1.741-.334a3.744 3.744 0 0 1-1.529-.932 4.1 4.1 0 0 1-.967-1.53c-.164-.492-.264-1.072-.299-1.74C.478 11.469.46 10.373.46 8.849c0-1.524.018-2.62.053-3.288.035-.668.135-1.248.299-1.741a4.088 4.088 0 0 1 .967-1.529 4.088 4.088 0 0 1 1.529-.967c.493-.164 1.073-.264 1.741-.299C5.717.99 6.813.972 8.337.972c1.524 0 2.62.018 3.288.053.668.035 1.248.135 1.74.299a4.091 4.091 0 0 1 1.53.967c.434.433.756.943.967 1.529.164.493.27 1.079.317 1.759zm-1.688 7.912c.14-.399.234-1.032.281-1.899.023-.516.035-1.243.035-2.18V8.286c0-.961-.012-1.688-.035-2.18-.047-.891-.141-1.524-.281-1.899a2.54 2.54 0 0 0-1.512-1.512c-.375-.141-1.008-.234-1.899-.281a50.449 50.449 0 0 0-2.18-.035H7.774c-.937 0-1.664.011-2.18.035-.867.047-1.5.14-1.899.281a2.535 2.535 0 0 0-1.512 1.512c-.141.375-.234 1.008-.281 1.899a50.449 50.449 0 0 0-.035 2.18v1.126c0 .937.011 1.664.035 2.18.047.867.14 1.5.281 1.899.305.726.809 1.23 1.512 1.512.399.14 1.032.234 1.899.281.516.023 1.243.035 2.18.035H8.9c.961 0 1.687-.012 2.18-.035.891-.047 1.524-.141 1.899-.281.726-.305 1.23-.809 1.512-1.512z"/>
+							</svg>
+						</a>
+					</div>
+					<a href="#" class="btn reservation-trigger text-black">Записаться</a>
+				</div>
+			</div>
+		</header>
+		<!-- header end -->
+
+		<main>
+		<div class="normal-page-outer contact-page">
+			<!-- page-headings -->
+			<div class="limiting-container page-headings">
+				<h1 class="h1">Контакты</h1>
+				<p class="sub-heading">Работаем без выходных<br>с 10:00 до 20:00</p>
+			</div>
+			<!-- page-headings end -->
+
+			<!-- maps slider start -->
+			<div class="contact-block">
+				<div class="limiting-container">
+
+					<div class="two-irregular-columns">
+						<div class="first-col">
+
+							<!-- slider -->
+							<div class="contacts-slider">
+
+								<div class="slider-item">
+									<p class="title">Работаем без выходных <br>с 10:00 до 20:00</p>
+									<div class="contact-part">
+										<div class="ico">
+											<img src="img/pin.png" alt="">
+										</div>
+										<p>Одесса, Гагаринское плато 5А/1</p>
+									</div>
+									<div class="contact-part">
+										<div class="ico">
+											<img src="img/phone.png" alt="">
+										</div>
+										<p>
+											<a href="" class="text-black">(050) 706-22-77;</a>
+											<a href="" class="text-black">(098) 706-22-77</a><br>
+											<a href="" class="text-black">(048) 706-22-77; </a>
+											<a href="" class="text-black">(094) 931-42-77</a>
+										</p>
+									</div>
+									<div class="contact-part">
+										<div class="ico">
+											<img src="img/email.png" alt="">
+										</div>
+										<p><a href="" class="text-black">info@workers.in.ua</a></p>
+									</div>
+
+								</div>
+								<div class="slider-item">
+									<p class="title">Работаем без выходных <br>с 10:00 до 20:00</p>
+									<div class="contact-part">
+										<div class="ico">
+											<img src="img/pin.png" alt="">
+										</div>
+										<p>Одесса, Test address</p>
+									</div>
+									<div class="contact-part">
+										<div class="ico">
+											<img src="img/phone.png" alt="">
+										</div>
+										<p>
+											<a href="" class="text-black">(0XX) XXX-XX-XX;</a>
+											<a href="" class="text-black">(0XX) XXX-XX-XX</a><br>
+											<a href="" class="text-black">(0XX) XXX-XX-XX;</a>
+											<a href="" class="text-black">(0XX) XXX-XX-XX</a>
+										</p>
+									</div>
+									<div class="contact-part">
+										<div class="ico">
+											<img src="img/email.png" alt="">
+										</div>
+										<p><a href="" class="text-black">info@workers.in.ua</a></p>
+									</div>
+
+								</div>
+								<div class="slider-item">
+									<p class="title">Работаем без выходных <br>с 10:00 до 20:00</p>
+									<div class="contact-part">
+										<div class="ico">
+											<img src="img/pin.png" alt="">
+										</div>
+										<p>Одесса, Гагаринское плато 5А/1</p>
+									</div>
+									<div class="contact-part">
+										<div class="ico">
+											<img src="img/phone.png" alt="">
+										</div>
+										<p>
+											<a href="" class="text-black">(050) 706-22-77;</a>
+											<a href="" class="text-black">(098) 706-22-77</a><br>
+											<a href="" class="text-black">(048) 706-22-77; </a>
+											<a href="" class="text-black">(094) 931-42-77</a>
+										</p>
+									</div>
+									<div class="contact-part">
+										<div class="ico">
+											<img src="img/email.png" alt="">
+										</div>
+										<p><a href="" class="text-black">info@workers.in.ua</a></p>
+									</div>
+
+								</div>
+								
+
+							</div>
+							<!-- slider -->
+
+						</div>
+						<div class="second-col">
+							<div class="map-container">
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2749.800651085645!2d30.758920015590142!3d46.43283067912433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c6338ba4dbb3f1%3A0x51537fe2225f88a6!2z0JPQsNCz0LDRgNC40L3RgdC60L7QtSDQn9C70LDRgtC-LCA1LCDQntC00LXRgdGB0LAsINCe0LTQtdGB0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsINCj0LrRgNCw0LjQvdCwLCA2NTAwMA!5e0!3m2!1sru!2s!4v1535890990014" frameborder="0" style="border:0" allowfullscreen></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- maps slider end -->
+			<!-- form start -->
+			<div class="gray-bg form-screen">
+				<form class="limiting-container form">
+					<span class="h1">Напишите нам</span>
+						<!-- <input type="text" placeholder="Имя*" required>
+						<input type="text" placeholder="Фамилия*" required>
+						<input type="text" placeholder="Номер телефона*" required>
+						<input type="text" placeholder="Email*" required> -->
+						<label for="inp1r" class="inp">
+						  <input type="text" id="inp1r" placeholder="&nbsp;">
+						  <span class="label">Имя*</span>
+						  <span class="inp-border"></span>
+						</label>
+						<label for="inp2r" class="inp">
+						  <input type="text" id="inp2r" placeholder="&nbsp;">
+						  <span class="label">Фамилия*</span>
+						  <span class="inp-border"></span>
+						</label>
+						<label for="inp3r" class="inp">
+						  <input type="tel" id="inp3r" placeholder="&nbsp;">
+						  <span class="label">Номер телефона*</span>
+						  <span class="inp-border"></span>
+						</label>
+						<label for="inp4r" class="inp">
+						  <input type="email" id="inp4r" placeholder="&nbsp;">
+						  <span class="label">Email*</span>
+						  <span class="inp-border"></span>
+						</label>
+						<button type="submit" id="three" class="btn text-black button">Отправить</button>
+						<!-- <button type="submit" class="btn text-black">ОТправить</button> -->
+				</form>
+			</div>
+
+		</div>
+		<!-- outer end -->
+
+
+
+		<footer id="main-footer">
+			<div class="logo">
+				<img src="img/logo-footer.png" alt="">
+			</div>
+			<p class="copyright">© 2018 Workers / Все права защищены</p>
+		</footer>
+
+
+		</main>
+
+	</div>
+	
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

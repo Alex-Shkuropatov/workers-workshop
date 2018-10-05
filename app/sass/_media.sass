@@ -1,0 +1,501 @@
+@import "vars"
+
+@media(max-height: 860px)
+	#modal-container
+		.modal-background
+			.standart-modal
+				width: 740px
+				height: 500px
+@media (min-width: 1700px)
+	.services-nav .item.active
+		width: 250px
+
+@media (max-width: 1366px)
+	.service-item
+		.ico-wrap
+			img
+				height: 35px
+		.heading-line
+			font-size: 19px
+			letter-spacing: 1px
+
+@media (max-width: 1260px)
+	.limiting-container
+		width: 1000px
+	//calculating chaos imgs
+	//вариант №2: отступ от края до выпирающей картинки будет 50px
+	//отступ от края при контейнере 1000:
+	// (100vw - 1140px) / 2 = 50vw - 500px
+	//на сколько нужно сместить блок влево чтобы отступ был 50px
+	// - (50vw - 500px - 50px) = 50vw - 550px
+	.chaos-line
+		width: calc(100% - 550px + 50vw)
+		margin-left: calc(550px - 50vw)
+	.big-slider
+		.h1
+			font-size: 32px
+
+@media (max-width: 1199px)
+	.services-list
+		flex-wrap: wrap
+	.service-item
+		width: calc(50% - 30px)
+	.service-item
+		.ico-wrap
+			img
+				height: 50px
+		.heading-line
+			font-size: 24px
+			letter-spacing: 1.2px
+	.gallery-container .gallery-item
+		width: 33.33333%
+
+
+@media (max-width: 1100px)
+	.limiting-container
+		width: 924px
+	//(100vw - 924px) / 2 - 50px
+	.chaos-line
+		width: calc(100% - 512px + 50vw)
+		margin-left: calc(512px - 50vw)
+	.text-column
+		padding-top: 90px
+
+	//MENU START
+	.mob-menu-btn
+		position: relative
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 45px
+		height: 26px
+		background: transparent
+		cursor: pointer
+		z-index: 20
+		span
+			display: block
+			position: absolute
+			width: 36px
+			height: 4px
+			background: #000
+			border-radius: 4px
+			transition: all .5s ease-in-out
+			&:before,
+			&:after
+				content: ''
+				display: block
+				height: 4px
+				width: 100%
+				background: #000
+				position: absolute
+				border-radius: 4px
+				transition: all .5s ease-in-out
+			&:before
+				top: -10px
+			&:after
+				top: 10px
+		&:not(.menu-open)
+			span:before,
+			span:after
+				transition: top .3s ease-in-out .3s, transform .3s ease-in-out, background .5s ease-in-out
+	.menu-open
+		span
+			animation-name: menu-rotate
+			animation-duration: 0.7s
+			background: transparent!important
+			&:before,
+			&:after
+				top: 0
+			&:before
+				transform: rotate(45deg)
+			&:after
+				transform: rotate(-45deg)
+	#main_header
+		.reservation-trigger
+			margin: 20px auto 0 auto
+		.menu-wrap
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			flex-direction: column
+			text-align: center
+			opacity: 0
+			position: absolute
+			top: 75px
+			height: 0px
+			overflow: hidden
+			transition: all .25s ease-in-out
+			right: 0
+			left: 0
+			background: #fff
+		.menu-list
+			flex-direction: column
+			font-size: 14px
+			li
+				margin: 10px 0
+		.header-socials
+			margin-top: 20px
+			a:last-child
+				margin-right: 20px
+		.menu-open
+			& + .menu-wrap
+				opacity: 1
+				height: 100vh
+				padding-top: 70px
+				transition: background .25s ease-in-out, height .25s ease-in-out
+				.menu-list
+					display: block
+		&.transparent-header
+			.mob-menu-btn
+				span,
+				span:before,
+				span:after
+					background: #fff
+			.menu-wrap
+				top: 0
+				background: rgba(0,0,0,.6)
+			.menu-open .menu-wrap
+				padding-top: 145px
+	//menu end
+	.trainings-screen .sub-heading
+		width: 70%
+
+//tablets start
+@media (max-width: 1024px)
+
+	//big-slider
+	.big-slider 
+		.slick-prev,
+		.slick-next
+			width: 17px
+
+@media (max-width: 1023px)
+	.limiting-container
+		width: 710px
+	.chaos-line
+		width: calc(100% - 380px + 50vw)
+		margin-left: calc(380px - 50vw)
+	.h1
+		font-size: 38px
+	.big-slider
+		.h1
+			font-size: 24px
+		.slick-prev,
+		.slick-next
+			width: 15px
+		.slick-prev
+			left: 0.5%
+		.slick-next
+			right: 0.5%
+	.text-column
+		padding-top: 70px
+	.quote-column
+		.quote-ico
+			top: 50px
+		.blockqoute-with-icon
+			padding: 0 30px
+			font-size: 14px
+	.big-blockquote-wrap
+		margin: 100px 0
+	.big-quote
+		width: 80%
+		img
+			margin-bottom: 50px
+	.popup-page
+		.prev-page
+			width: 28px
+			height: 28px
+			&:after,
+			&:before
+				width: 39px
+		.stats .stat
+			padding: 0 25px
+		.form
+			.inp
+				width: 75%
+	.bg-screen
+		.h1
+			margin-top: 30px
+			font-size: 28px
+	.course
+		.img-col
+			align-items: flex-start
+			padding-top: 70px
+	.course-stats
+		flex-direction: column
+		.stat-col
+			padding: 0
+			border: none
+			margin: 3px 0
+	.services-page
+		.foreground
+			p
+				max-width: 40%
+				br
+					display: none
+	//end 1023
+
+@media (max-width: 767px)
+	.display-mob
+		display: block
+	.limiting-container
+		width: 540px
+	.chaos-line
+		width: calc(100% - 310px + 50vw)
+		margin-left: calc(310px - 50vw)
+	.big-slider
+		.slick-prev
+			top: calc(100vw / 4.04)
+		.slick-next
+			top: calc(100vw / 4.04 - 22px)
+		.slide-text-wrap
+			position: static
+			.caption, a
+				color: #000
+			.slide-text
+				width: 80%
+				margin-top: 30px
+				margin-left: 0
+	.two-columns-container
+		flex-direction: column
+		padding: 0
+		margin-bottom: 50px
+	.course:nth-child(even)
+		flex-direction: column
+	.two-columns-column
+		width: 100%
+		img:not(.not-responsive-img)
+			min-width: 100%
+	.quote-column
+		margin-bottom: 40px
+	.cert-screen
+		.limiting-container
+			flex-direction: column-reverse
+		.cert-text,
+		.cert-img
+			width: 100%
+		.cert-img
+			margin-bottom: 38px
+	.two-irregular-columns
+		flex-direction: column
+		.first-col,
+		.second-col
+			width: 100%
+		.second-col
+			margin: 0
+			text-align: center
+	.vertical-slider
+		.h1
+			margin-top: 30px
+		.slick-dots
+			top: auto
+			bottom: -35px
+			flex-direction: row
+			width: 100%
+			li
+				margin: 0 5px
+	.master-icons
+		justify-content: center
+	.contact-block
+		.map-container
+			margin-top: 40px
+			height: 450px
+	.creative-director-screen
+		p
+			text-align: justify
+		.socials-line
+			justify-content: center
+		.first-col
+			order: 0
+			margin-bottom: 25px
+			img
+				margin: 0 auto
+	.vertical-slider .first-col img
+		margin: 0 auto
+	.form
+		.inp
+			width: 450px
+	.popup-page
+		padding-top: 20px
+		.stats .stat
+			padding: 0 11px
+		.limiting-container
+			width: 100%
+	.popup-page-slider
+		.item-inner
+			flex-direction: column
+		.img-wrap
+			margin: 0 auto
+		.name, .post
+			text-align: center
+		.socials
+			justify-content: center
+			a:last-child
+				margin-right: 0
+		.slick-dots
+			width: 100%
+			bottom: -30px
+	.mob-center
+		text-align: center
+	.gallery-container .gallery-item
+		width: 50%
+	.trainings-screen .sub-heading
+		width: 100%
+	.bg-screen
+		.foreground
+			position: static
+			color: #000
+			.text-white
+				color: #000
+	.trainings-screen
+		.headings
+			display: none
+	.training-item
+		text-align: center
+		flex-direction: column
+		padding-right: 50px
+		padding-left: 50px
+		& *[class^="col-"]
+			width: 100%
+			align-self: center
+		a
+			flex-direction: column
+		.name
+			flex-direction: column
+		.img-wrap
+			height: auto
+			margin: 0 0 15px 0
+			img
+				position: static
+	.course
+		padding-bottom: 60px
+		.img-col
+			padding-top: 0
+			margin-bottom: 35px
+	//services page
+	.service-table-wrap
+		overflow-x: scroll
+	.service-table td
+		padding-left: 20px
+		padding-top: 15px
+		padding-bottom: 15px
+		&:not(:first-child)
+			padding-right: 20px
+	.services-page
+		.foreground
+			p
+				max-width: 100%
+				br
+					display: block
+	.service-table-wrap
+		&:nth-child(n+2)
+			.heading
+				opacity: 1
+	.services-nav
+		display: none
+	//end 768
+
+	
+@media (max-width: 680px)
+	.service-item
+		width: calc(100% - 30px)
+
+@media (max-width: 600px)
+	.limiting-container
+		width: 80%
+	.chaos-line
+		width: calc(85vw)
+		margin-left: calc(-5vw)
+	.page-headings
+		.sub-heading
+			br
+				display: none
+	.chaos-images
+		& > div:not(.chaos-line)
+			margin-left: 5%
+	.big-quote
+		width: 90%
+	.big-blockquote-wrap
+		blockquote
+			font-size: 18px
+	.master-icons
+		img
+			width: 30px
+	#main_header,
+	#main_header.transparent-header
+		height: 70px
+	#main_header
+		.logo-wrap
+			height: 22px
+			img
+				max-height: 22px
+		&:not(.transparent-header)
+			.menu-open
+				& + .menu-wrap
+					//padding-top: 70px
+					top: 70px
+	//menu
+	.mob-menu-btn:not(.menu-open)
+		width: 40px
+		height: 20px
+		span
+			width: 30px
+			&:after
+				top: 8px
+			&:before
+				top: -8px
+	.form
+		.inp
+			width: 85%
+	.gallery-container .gallery-item
+		width: 100%
+	.gallery-page .gallery-nav
+		flex-direction: column
+		li
+			margin: 5px 0
+			&.active:after
+				width: 15%
+@media (max-width: 556px)
+	.popup-page
+		.stats
+			flex-direction: column
+			margin-bottom: 70px
+			.stat
+				margin: 10px 0
+				padding: 0
+				border: none
+		.prev-page
+			width: 23px
+			height: 23px
+			&:after,
+			&:before
+				width: 32px
+		.form
+			.inp
+				width: 85%
+	.register-application
+		border: none
+@media (max-width: 500px)
+	.h1
+		font-size: 30px
+	.foreground
+		.btns
+			display: flex
+			flex-direction: column
+			align-items: center
+			.btn:first-child
+				margin-right: 0
+				margin-bottom: 30px
+	.two-columns-column p
+		padding-right: 0
+
+@media (max-width: 450px)
+	.big-blockquote-wrap
+		blockquote
+			font-size: 14px
+	.form
+		.inp
+			width: 100%
+//@media (max-width: )
+
+
