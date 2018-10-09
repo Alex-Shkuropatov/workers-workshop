@@ -68,10 +68,10 @@ $(function() {
 	});
 
 	if($('.transparent-header').length){
-		if($(document).scrollTop() > 100)
+		if($('.content').scrollTop() > 100)
 			$('#main_header').removeClass('transparent-header');
-		$(document).scroll(function() {
-			var offset = $(document).scrollTop();
+		$('.content').scroll(function() {
+			var offset = $('.content').scrollTop();
 			//window
 		  if(offset > 100) {
 		    $('#main_header').removeClass('transparent-header');
@@ -117,7 +117,7 @@ $(function() {
 	$('.anchor-link').click(function(e){
 		e.preventDefault();
 		var id = $(this).attr('href');
-		$('html, body').animate({
+		$('.content').animate({
 			scrollTop: $(id).offset().top - 50
 		}, 500);
 	});
