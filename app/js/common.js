@@ -106,11 +106,13 @@ $(function() {
 	  var buttonId = $(this).attr('id');
 	  $('#modal-container').removeAttr('class').addClass(buttonId);
 	  $('html').addClass('modal-active');
+	  $('#main_header').addClass('header-out');
 	});
 
 	$('.close-three').click(function(){
 	  $('#modal-container').addClass('out');
 	  $('html').removeClass('modal-active');
+	  $('#main_header').removeClass('header-out');
 	});
 
 	//anchor links scroll animation
